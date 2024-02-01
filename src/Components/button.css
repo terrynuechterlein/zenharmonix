@@ -1,0 +1,12 @@
+.button-style {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-style:hover {
+  background-color: rgb(112, 168, 208);
+}
