@@ -1,9 +1,39 @@
+'use client'
 import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import BlackHoverBtn from "../../Components/Button";
+import { useRouter } from 'next/navigation'
+import "./login.css";
 
 const Login = () => {
+
+  const router = useRouter(); 
+
   return (
-    <div>Login</div>
-  )
-}
+    <div className="login-container">
+      <h1 className="login-title">Zen Harmonix</h1>{" "}
+
+      <div className="logo-container">
+        <Image src="/assets/logo3.png" alt="Logo" width={100} height={100} />
+      </div>
+
+      <form className="login-form">
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+
+        {/*This doesn't go anywhere yet, just puts you back at Login*/}
+        <div className="button-container">
+        <BlackHoverBtn type="button" onClick={() => router.push('/Login')}>Login</BlackHoverBtn></div>
+
+      </form>
+
+      {/*This doesn't do anything yet*/}
+      <div className="forgot-text">
+        <Link href="/Login" className="forgot-link">Forgot password?</Link>
+      </div>
+    </div>
+  );
+};
 
 export default Login
