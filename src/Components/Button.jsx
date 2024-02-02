@@ -1,11 +1,11 @@
 import React from 'react';
 import './button.css'; 
-const Button = ({ type, onClick, children }) => {
+const BlackHoverBtn = ({ type, onClick, children }) => {
   return (
-    <button type={type} className="button-style" onClick={onClick}>
+    <button type={type} className="blackbtn-style" onClick={onClick}>
       {children}
     </button>
   );
 };
 
-export default Button;
+export default BlackHoverBtn;
