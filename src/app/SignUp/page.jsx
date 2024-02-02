@@ -3,9 +3,9 @@ import React from "react";
 import "./signup.css";
 import BlackHoverBtn from "../../Components/Button";
 import Image from "next/image";
+import {Button, ButtonGroup} from "@nextui-org/react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
-
 
 const SignUp = () => {
   const router = useRouter(); 
@@ -23,20 +23,22 @@ const SignUp = () => {
       </div>
 
       <form className="signup-form">
+
+        <ButtonGroup>
+          <Button>Sign Up</Button>
+          <Button>Login</Button>
+        </ButtonGroup>
+
         <input type="email" placeholder="Email" />
         <input type="text" placeholder="Username" />
         <input type="password" placeholder="Password" />
         <input type="password" placeholder="Confirm Password" />
 
         <div className="button-container">
-        <BlackHoverBtn type="button" onClick={() => router.push('/Login')}>Sign Up</BlackHoverBtn>
+        <BlackHoverBtn type="button" onClick={() => router.push('/Login')}>Create Account</BlackHoverBtn>
 
         </div>
       </form>
-      <div className="login-text">
-        Already a member?{' '}
-        <Link href="/Login" className="login-link">Login</Link>
-      </div>
  
     </div>
   );
