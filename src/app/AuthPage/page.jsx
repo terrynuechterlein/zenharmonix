@@ -4,10 +4,12 @@ import "./authpage.css";
 import {BlackHoverBtn, WhiteToBlackBtn, WhiteOutlineBtn}  from "../../Components/Button";
 import Image from "next/image";
 import Link from "next/link";
+import {useRouter} from 'next/navigation';
 import StatefulTabs from "../../Components/StatefulTabs"; 
 
 const AuthPage = () => {
   const [activeForm, setActiveForm] = useState('signUp');
+  const router = useRouter();
 
   return (
     <div className="container_auth">
@@ -32,9 +34,15 @@ const AuthPage = () => {
             <input type="password" placeholder="Password" />
           </div>
         )}
-        <div className="form__button">
-          <WhiteToBlackBtn type="button">{activeForm === 'signUp' ? 'Create Account' : 'Login'}</WhiteToBlackBtn>
-        </div>
+        {activeForm === 'signUp' ? (
+          <div className="form__button">
+            <WhiteToBlackBtn type="button" onClick={() => setActiveForm('signIn')} className={activeForm === 'signIn' ? 'active' : ''}>Create Account</WhiteToBlackBtn>
+          </div>
+        ) : (
+          <div className="form__button">
+            <WhiteToBlackBtn type="button" onClick={() => router.push('/Dashboard')}>Login</WhiteToBlackBtn>
+          </div>
+        )}
         {activeForm === 'signIn' && (
           <div className="form__forgot-text">
             <Link href="/forgot-password" className="forgot-text__forgot-link">Forgot password?</Link>
