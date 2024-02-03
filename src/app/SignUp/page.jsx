@@ -24,9 +24,9 @@ const SignUp = () => {
 
       <form className="signup-form">
 
-        <ButtonGroup>
-          <Button>Sign Up</Button>
-          <Button>Login</Button>
+        <ButtonGroup className="button-group">
+          <BlackHoverBtn type="button" className="left-button">Sign Up</BlackHoverBtn>
+          <BlackHoverBtn type="button" className="right-button" onClick={() => router.push('/Login')}>Login</BlackHoverBtn>
         </ButtonGroup>
 
         <input type="email" placeholder="Email" />

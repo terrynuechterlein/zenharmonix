@@ -65,14 +65,14 @@ input {
   margin-top: 20px; 
 }
 
-.login-text {
-  color: white; 
-  margin-top: 20px; 
+.button-group {
+  justify-content: center; 
 }
 
-.login-link {
-  color: rgb(128, 55, 197); 
-  font-weight: bold; 
-  text-decoration: none; 
+.left-button {
+  justify-content: left; 
 }
 
+.right-button {
+  justify-content: right; 
+}
