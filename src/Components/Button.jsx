@@ -8,4 +8,20 @@ const BlackHoverBtn = ({ type, onClick, children }) => {
   );
 };
 
-export default BlackHoverBtn;
+const WhiteOutlineBtn = ({ type, onClick, children }) => {
+  return (
+    <button type={type} className="whiteOutlinebtn-style" onClick={onClick}>
+      {children}
+    </button>
+  );
+};
+
+const WhiteToBlackBtn = ({ type, onClick, children }) => {
+  return (
+    <button type={type} className="whiteToBlackbtn-style" onClick={onClick}>
+      {children}
+    </button>
+  );
+};
+
+export { BlackHoverBtn, WhiteOutlineBtn, WhiteToBlackBtn  };
