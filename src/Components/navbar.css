@@ -2,8 +2,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: gray;
-    padding: 20px 80px;
+    background: rgba(31, 16, 70, 0.726);
+    padding: 6px 80px;
 }
 
 .nav_logo {

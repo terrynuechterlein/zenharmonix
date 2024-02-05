@@ -13,8 +13,7 @@ function Navbar () {
             <StatefulTabs className="tabs">My Feed</StatefulTabs>
             <div>
                 <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Saved</a></li>
+                    <li><a>Account</a></li>
                     <li><a>Logout</a></li>
                 </ul>
             </div>
