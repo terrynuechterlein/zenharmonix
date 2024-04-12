@@ -1,12 +1,18 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 import "./statefultabs.css";
 
-const StatefulTabs = ({ activeForm, setActiveForm }) => {
+const StatefulTabs = ({ activeTab, setActiveTab, tabTitles }) => {
   return (
     <div className="tabs">
-      <button onClick={() => setActiveForm('signUp')} className={activeForm === 'signUp' ? 'active' : ''}>Sign Up</button>
-      <button onClick={() => setActiveForm('signIn')} className={activeForm === 'signIn' ? 'active' : ''}>Sign In</button>
+      {tabTitles.map((title, index) => (
+        <button
+          key={index}
+          onClick={() => setActiveTab(title.toLowerCase())}
+          className={activeTab === title.toLowerCase() ? 'active' : ''}>
+          {title}
+        </button>
+      ))}
     </div>
   );
 };

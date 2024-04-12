@@ -1,0 +1,32 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; 
+}
+
+.tabs button {
+  opacity: 0.7;
+  cursor: pointer;
+  background: transparent;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: opacity 0.3s ease; 
+  position: relative;
+}
+
+.tabs button.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* underline */
+.tabs button.active::after {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute;
+  bottom: -10px; 
+  left: 0;
+  right: 0;
+  height: 2px; /* Height of the underline */
+  background: currentColor; /* Use the text color for the underline */
+  margin: auto; 
+}

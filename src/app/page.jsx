@@ -5,10 +5,10 @@ import {
   BlackHoverBtn,
   WhiteToBlackBtn,
   WhiteOutlineBtn,
-} from "../../Components/Button";
+} from "../Components/Button";
 import Image from "next/image";
 import Link from "next/link";
-import StatefulTabs from "../../Components/StatefulTabs";
+import AuthTabs from "../Components/AuthTabs";
 
 const AuthPage = () => {
   const [activeForm, setActiveForm] = useState("signUp");
@@ -74,7 +74,7 @@ const AuthPage = () => {
             ? "auth__form form__signup"
             : "auth__form form__signin"
         }>
-        <StatefulTabs activeForm={activeForm} setActiveForm={setActiveForm} />
+        <AuthTabs activeForm={activeForm} setActiveForm={setActiveForm} />
 
         {activeForm === "signUp" ? (
           <form onSubmit={handleSignup}>

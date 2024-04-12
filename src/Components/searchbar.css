@@ -1,0 +1,56 @@
+.search_bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+}
+
+.inputText{
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search_icon {
+  position: absolute;
+  right: 0; /* Adjust based on your design needs */
+  top: 0; /* Align with the top of the input */
+  height: 100%; /* Match input height */
+  display: flex;
+  align-items: center; /* Center icon vertically */
+  padding-right: 10px; 
+  cursor: pointer;
+  color:black;
+}
+
+.options_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0; /* This stretches the menu to cover the search bar area */
+  /* background-color: rgba(10, 190, 240, 0.4); */
+  /* background-color: rgba(200, 20, 200, 0.4); */
+  background-color: rgba(20, 20, 100, 0.4);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.options_menu div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.options_menu div:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}

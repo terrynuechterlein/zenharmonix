@@ -1,0 +1,25 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px; /* Reduced padding for smaller tag size */
+  margin: 5px;
+  background-color: lightgrey;
+  border-radius: 15px; /* Increase border-radius for rounded tags */
+  font-size: 0.8rem; /* Adjust font size for smaller tags */
+}
+
+.remove-tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px; /* Width and height set to the same value for a circle */
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Ensure circular shape */
+  font-size: 0.8rem;
+  line-height: 1;
+}

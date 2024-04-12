@@ -1,23 +1,140 @@
 .container_dashboard {
-    background: none;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .container_dashboard::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-image: url('/assets/background.png');
-    background-size: cover;
-    filter: blur(8px);
-  }
-  
-  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.container_dashboard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url('/assets/background.png');
+  background-size: cover;
+  filter: blur(8px);
+}
+.welcome_message {
+  margin-top: 5vh; /* Adjust based on navbar height */
+  font-size: 2rem; /* Big, bold text */
+  font-weight: bold;
+  color: #ffffff;
+}
+.main_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Adjust for spacing between elements */
+  align-items: center;
+  gap: 20px;
+}
+
+.search_controls {
+  display: flex;
+  gap: 20px; /* Adjust the gap between controls as needed */
+  position: relative;
+  margin-top: -15%; /* Adjust as necessary to achieve 3/4 height */
+
+}
+
+.tag-container {
+  display: flex; /* Display tags inline */
+  gap: 10px; /* Adjust gap between tags */
+  margin-top: -23%;
+}
+
+.tag-message, .max-tags {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.max-tags {
+  color: red;
+}
+
+.search_button {
+  background-color: #ffffff; /* Or any color that fits your design */
+  border: none;
+  cursor: pointer;
+  padding: 10px; /* Adjust padding to control the size of the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px; /* Smaller rounded corners */
+  height: 40px; /* Ensure it's a square by setting equal width and height */
+  width: 40px;
+}
+
+.search_icon {
+  color: black;
+  font-size: 24px; /* Increase icon size */
+}
+
+.songs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.song {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px; /* Adjust based on your preference */
+}
+
+.song-thumbnail {
+  width: 100%;
+  height: 170px; /* Adjust based on your preference */
+  object-fit: cover; /* Ensure thumbnails cover the space well */
+}
+
+.song-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.song-title {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.song a {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.song .like-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 10px; /* Adjust based on your layout */
+  right: 10px; /* Adjust based on your layout */
+  font-size: 24px; /* Adjust size as needed */
+  transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.song .liked {
+  color: #ff0000; /* Red for liked */
+}
+
+.song .like-button:hover {
+  transform: scale(1.1); /* Slightly larger on hover for a tactile feel */
+}
+

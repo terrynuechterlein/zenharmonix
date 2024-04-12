@@ -1,0 +1,33 @@
+.category_dropdown {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center content horizontally, adjust as needed */
+  white-space: nowrap; /* Prevent wrapping to a new line */
+}
+
+.categories_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(20, 20, 100, 0.4);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.categories_menu div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.categories_menu div:hover {
+  /* background-color: #f0f0f0; */
+  background-color: rgba(255, 255, 255, 0.4);
+}
